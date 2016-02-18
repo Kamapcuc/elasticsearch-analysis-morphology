@@ -19,8 +19,10 @@ package org.elasticsearch.index.analysis.morphology;
 import org.elasticsearch.index.analysis.AnalysisModule;
 import org.elasticsearch.index.analysis.morphology.english.EnglishMorphologyAnalyzerProvider;
 import org.elasticsearch.index.analysis.morphology.english.EnglishMorphologyTokenFilterFactory;
+import org.elasticsearch.index.analysis.morphology.english.EnglishWordFormTokenFilterFactory;
 import org.elasticsearch.index.analysis.morphology.russian.RussianMorphologyAnalyzerProvider;
 import org.elasticsearch.index.analysis.morphology.russian.RussianMorphologyTokenFilterFactory;
+import org.elasticsearch.index.analysis.morphology.russian.RussianWordFormTokenFilterFactory;
 
 /**
  *
@@ -37,5 +39,8 @@ public class MorphologyAnalysisBinderProcessor extends AnalysisModule.AnalysisBi
     public void processTokenFilters(TokenFiltersBindings tokenFiltersBindings) {
         tokenFiltersBindings.processTokenFilter("russian_morphology", RussianMorphologyTokenFilterFactory.class);
         tokenFiltersBindings.processTokenFilter("english_morphology", EnglishMorphologyTokenFilterFactory.class);
+        tokenFiltersBindings.processTokenFilter("russian_word_form", RussianWordFormTokenFilterFactory.class);
+        tokenFiltersBindings.processTokenFilter("english_word_form", EnglishWordFormTokenFilterFactory.class);
     }
+
 }

@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.elasticsearch</groupId>
     <artifactId>elasticsearch-analysis-morphology</artifactId>
-    <version>1.2.0</version>
+    <version>1.2.0-patched</version>
     <packaging>jar</packaging>
     <description>Russian Morphology for ElasticSearch</description>
     <inceptionYear>2012</inceptionYear>
@@ -31,8 +31,8 @@
     </parent>
 
     <properties>
-        <elasticsearch.version>1.0.0</elasticsearch.version>
-        <russian.morphology.version>4.6.0</russian.morphology.version>
+        <elasticsearch.version>1.4.2-patched</elasticsearch.version>
+        <russian.morphology.version>4.6.0-patched</russian.morphology.version>
     </properties>
 
     <repositories>

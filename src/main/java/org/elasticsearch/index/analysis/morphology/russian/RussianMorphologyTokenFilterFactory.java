@@ -34,7 +34,7 @@ import java.io.IOException;
  */
 public class RussianMorphologyTokenFilterFactory extends AbstractTokenFilterFactory {
 
-    private final LuceneMorphology luceneMorph;
+    protected final LuceneMorphology luceneMorph;
 
     @Inject
     public RussianMorphologyTokenFilterFactory(Index index, @IndexSettings Settings indexSettings, String name, Settings settings) {
